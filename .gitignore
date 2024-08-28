@@ -1,0 +1,63 @@
+# Ignore C# build output and temporary files in komster-hambat
+komster-hambat/bin/
+komster-hambat/obj/
+komster-hambat/*.exe
+komster-hambat/*.dll
+komster-hambat/*.pdb
+komster-hambat/*.cache
+
+# Ignore Visual Studio user-specific and working folders for komster-hambat
+komster-hambat/.vscode/
+komster-hambat/.vs/
+komster-hambat/*.user
+komster-hambat/*.rsuser
+komster-hambat/*.suo
+komster-hambat/*.userosscache
+komster-hambat/*.sln.docstates
+komster-hambat/*.orig
+
+# Ignore generated code files for komster-hambat
+komster-hambat/*.g.cs
+komster-hambat/*.g.i.cs
+
+# Ignore test results for komster-hambat
+komster-hambat/TestResults/
+komster-hambat/*.trx
+komster-hambat/*.coverage
+
+# Ignore Node.js dependencies and build artifacts in komster-hambat-mock-api
+komster-hambat-mock-api/node_modules/
+komster-hambat-mock-api/dist/
+komster-hambat-mock-api/build/
+komster-hambat-mock-api/out/
+
+# Ignore npm/yarn lock files in komster-hambat-mock-api
+komster-hambat-mock-api/package-lock.json
+komster-hambat-mock-api/yarn.lock
+
+# Ignore logs for both projects
+komster-hambat/*.log
+komster-hambat/logs/
+komster-hambat-mock-api/*.log
+komster-hambat-mock-api/logs/
+
+# Ignore environment files in komster-hambat-mock-api
+komster-hambat-mock-api/.env
+komster-hambat-mock-api/.env.local
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+*.lnk
+
+# Ignore npm/yarn debug files in komster-hambat-mock-api
+komster-hambat-mock-api/npm-debug.log*
+komster-hambat-mock-api/yarn-debug.log*
+komster-hambat-mock-api/yarn-error.log*
+
+# Ignore temporary files
+~$*
+*~
+
+# Ignore config
+komster-hambat/appsettings.json
