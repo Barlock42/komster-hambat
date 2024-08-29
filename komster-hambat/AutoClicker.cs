@@ -46,6 +46,9 @@ namespace KomsterHambatAutoClicker
 
                     if (maxTapsToSend > 0)
                     {
+                        int delayBeforeTapping = RandomGenerator.Next(5000, 8001);
+                        await Task.Delay(delayBeforeTapping);
+
                         int tapsToSend = RandomGenerator.Next(1, maxTapsToSend + 1);
 
                         long timestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
