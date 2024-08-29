@@ -42,13 +42,16 @@ namespace KomsterHambatAutoClicker
                     int tapsRecoverPerSec = clickerUser.TapsRecoverPerSec;
                     int earnPerTap = clickerUser.EarnPerTap;
 
+                    int delayBeforeTapping = RandomGenerator.Next(5000, 8001);
+                    await Task.Delay(delayBeforeTapping);
+
+                    int recoveredTaps = (tapsRecoverPerSec * (delayBeforeTapping / 1000));
+                    availableTaps = Math.Min(availableTaps + recoveredTaps, maxTaps);
+
                     int maxTapsToSend = availableTaps / earnPerTap;
 
                     if (maxTapsToSend > 0)
                     {
-                        int delayBeforeTapping = RandomGenerator.Next(5000, 8001);
-                        await Task.Delay(delayBeforeTapping);
-
                         int tapsToSend = RandomGenerator.Next(1, maxTapsToSend + 1);
 
                         long timestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
